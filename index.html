@@ -1,5 +1,56 @@
-<h1>Devops days locations</h1>
-<ul>
-  <li>Paris</li>
-  <li>Basel</li>
-</ul>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Affichage JSON</title>
+    <style>
+      .event {
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      .event img {
+        max-width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Liste des événements DevOps</h1>
+
+    <div id="events-container"></div>
+
+    <script>
+      // Charger le fichier JSON
+      fetch("events.json")
+        .then((response) => response.json())
+        .then((data) => {
+          // Sélectionner le container pour afficher les événements
+          const container = document.getElementById("events-container");
+
+          // Parcourir les événements et les afficher
+          data.forEach((event) => {
+            const eventDiv = document.createElement("div");
+            eventDiv.classList.add("event");
+
+            // Créer le contenu pour chaque événement
+            eventDiv.innerHTML = `
+                    <h2>${event.event_name}</h2>
+                    <p><strong>Lieu:</strong> ${event.location}</p>
+                    <p><strong>Date:</strong> ${new Date(
+                      event.date
+                    ).toLocaleString()}</p>
+                    <img src="${event.logo}" alt="${event.event_name} logo">
+                `;
+
+            // Ajouter l'événement au container
+            container.appendChild(eventDiv);
+          });
+        })
+        .catch((error) => {
+          console.error("Erreur lors du chargement du fichier JSON:", error);
+        });
+    </script>
+  </body>
+</html>

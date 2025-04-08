@@ -1,0 +1,32 @@
+[
+  {
+    "event_name": "DevOps Days Paris",
+    "location": "Paris, France",
+    "date": "2025-05-15T09:00:00",
+    "logo": "https://example.com/logos/devops_days_paris.png"
+  },
+  {
+    "event_name": "DockerCon 2025",
+    "location": "San Francisco, USA",
+    "date": "2025-06-18T08:30:00",
+    "logo": "https://example.com/logos/dockercon.png"
+  },
+  {
+    "event_name": "Kubernetes Meetup - DevOps",
+    "location": "Lyon, France",
+    "date": "2025-04-22T18:00:00",
+    "logo": "https://example.com/logos/kubernetes_meetup.png"
+  },
+  {
+    "event_name": "GitOps Summit 2025",
+    "location": "Berlin, Germany",
+    "date": "2025-07-10T10:00:00",
+    "logo": "https://example.com/logos/gitops_summit.png"
+  },
+  {
+    "event_name": "Continuous Delivery Conference",
+    "location": "London, UK",
+    "date": "2025-09-05T09:30:00",
+    "logo": "https://example.com/logos/cd_conference.png"
+  }
+]
