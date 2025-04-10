@@ -15,10 +15,10 @@ services:
     image: mariadb:10.11
     container_name: mariadb-container
     environment:
-      MARIADB_ROOT_PASSWORD: sup4rs3cure
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
       MARIADB_DATABASE: promocesi
       MARIADB_USER: johnny
-      MARIADB_PASSWORD: s3cr4T
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
 
