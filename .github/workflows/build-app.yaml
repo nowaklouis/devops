@@ -1,0 +1,19 @@
+name: Build App
+
+on:
+  push:
+    branches: -feat-1-init
+  pull_request:
+    branches:
+      - -feat-1-init # Exécute également l'action lors d'une pull request vers `main`
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Utilise un environnement Ubuntu pour exécuter le job
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 # Cette action permet de récupérer ton code
+
+      - name: Build image
+        run: echo "Build image" # Exécute une commande simple qui affiche "Build image"
